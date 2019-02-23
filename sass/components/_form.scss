@@ -15,6 +15,10 @@
     width: 90%;
     display: block;
 
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
     &::-webkit-input-placeholder {
       color: $color-grey-dark-2;
     }
@@ -51,6 +55,11 @@
   &__radio-group {
     width: 40%;
     display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
 
   &__radio-label {
@@ -68,7 +77,7 @@
     display: inline-block;
     position: absolute;
     left: 0;
-    top: -.5rem;
+    top: -0.5rem;
 
     &::after {
       height: 1.3rem;
@@ -82,8 +91,8 @@
       transform: translate(-50%, -50%);
       background-color: $color-primary;
       opacity: 0;
-      transition: opacity .2s;
-    } 
+      transition: opacity 0.2s;
+    }
   }
 
   &__radio-input:checked ~ &__radio-label &__radio-button::after {
